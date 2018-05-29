@@ -85,6 +85,9 @@ class Counter extends PersistentActor {
 
 object Counter extends App {
 
+
+  println (akka.util.Helpers.getClass().getProtectionDomain().getCodeSource().getLocation())
+
   val system = ActorSystem("akka-persistence")
 
   val counter = system.actorOf(Props[Counter],"Counter")
